@@ -14,7 +14,7 @@
   <p>Please input a dictionary in TSV (Tab-Separated Values) format, where each line consists of three columns: a single Chinese character, its pronunciation, and an optional note.</p>
   <p><textarea id="rawDictionaryInput"></textarea></p>
   <p>Please input the table specifications.</p>
-  <p><textarea id="rawTableSpecsInput">推導聲母&#9;母&#10;推導韻母&#9;[...音韻地位.最簡描述.slice(1,-1)].reverse().join('')&#10;推導聲調&#9;(音韻地位.屬於('全清 或 次清')?'陰':'陽')+聲</textarea></p>
+  <p><textarea id="rawTableSpecsInput">推導聲母&#9;母&#10;推導韻母&#9;(音韻地位.屬於('果攝')?'1果':音韻地位.屬於('假攝')?'2假':音韻地位.屬於('遇攝')?'3遇':音韻地位.屬於('蟹攝')?'4蟹':音韻地位.屬於('止攝')?'5止':音韻地位.屬於('效攝')?'6效':音韻地位.屬於('流攝')?'7流':音韻地位.屬於('咸攝')?'8咸':音韻地位.屬於('深攝')?'9深':音韻地位.屬於('山攝')?'10山':音韻地位.屬於('臻攝')?'11臻':音韻地位.屬於('宕攝')?'12宕':音韻地位.屬於('江攝')?'13江':音韻地位.屬於('曾攝')?'14曾':音韻地位.屬於('梗攝')?'15梗':'16通')+[...音韻地位.最簡描述.slice(1,-1)].reverse().join('')+(音韻地位.屬於('幫組')?'1幫':音韻地位.屬於('端組')?'2端':音韻地位.屬於('知組')?'4知':音韻地位.屬於('精組')?'5精':音韻地位.屬於('莊組')?'6莊':音韻地位.屬於('章組')?'7章':音韻地位.屬於('見組')?'9見':音韻地位.屬於('來母')?'3來':音韻地位.屬於('日母')?'8日':'10影')+(音韻地位.屬於('舒聲')?'1舒':'2入')&#10;推導聲調&#9;(音韻地位.屬於('全清 或 次清')?'陰':'陽')+聲</textarea></p>
   <p>
     <input type="button" value="Load sample dictionary" onclick="handleLoadSampleDict()" />
     <input type="submit" value="Start extrapolate" onclick="handleSubmit()" />
